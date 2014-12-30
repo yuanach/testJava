@@ -1,0 +1,1012 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity" >
+     <EditText
+            android:id="@+id/etProductName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:hint="请输入用户名" >
+        </EditText>
+        <EditText
+            android:id="@+id/etProductName1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="50dp"
+            android:hint="请输入密码"
+            android:inputType="textPassword" 
+            android:layout_below="@+id/etProductName" />
+     <!-- <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/etProductName1" 
+        android:layout_marginTop="50dp">
+     </TextView>
+      <TextView
+        android:id="@+id/tvResult1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/tvResult1" 
+        android:layout_marginTop="50dp">
+     </TextView> -->
+     <Button
+         android:id="@+id/btnLogin"
+         android:text="登陆"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentBottom="true"
+         android:layout_width="100dp"
+         android:layout_height="50dp">
+     </Button>
+</RelativeLayout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity"
+    android:background="@drawable/field"
+   >
+<RelativeLayout 
+    android:id="@+id/layoutup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="65dp"
+    >
+    <TextView
+        android:id="@+id/tvFarmID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="农场id:"
+        android:textStyle="bold"
+        android:layout_marginLeft="65dp"
+        >
+     </TextView>
+     <EditText
+            android:id="@+id/etFarmID"
+            android:layout_width="140dp"
+            android:layout_height="35dp"
+            android:text="F00005"
+            android:layout_toRightOf="@id/tvFarmID" 
+            android:layout_marginTop="10dp"
+            android:textSize="11dp"/>
+      <TextView
+        android:id="@+id/tvPlotID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvFarmID"
+        android:text="地块id:"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="65dp"
+        >
+     </TextView>
+      <EditText
+            android:id="@+id/etPlotID"
+            android:layout_width="140dp"
+            android:layout_height="35dp"
+            android:text="P00005"
+            android:layout_toRightOf="@id/tvPlotID" 
+            android:layout_marginTop="60dp"
+            android:textSize="11dp"/>
+</RelativeLayout>      
+<RelativeLayout 
+    android:id="@+id/layoutdown"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/layoutup"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="10dp"
+    >
+        <Button 
+          android:id="@+id/btnReTry"
+          android:layout_width="60dp"
+          android:layout_height="32dp"
+          android:text="重置"
+          android:textSize="11dp"
+          />
+    <Button 
+          android:id="@+id/btnCheck"
+          android:layout_width="60dp"
+          android:layout_height="32dp"
+          android:text="查询"
+          android:layout_toRightOf="@id/btnReTry"
+          android:layout_marginLeft="20dp"
+          android:textSize="11dp"
+          />
+</RelativeLayout> 
+</RelativeLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="5" >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="bottom|center_horizontal"
+        android:paddingBottom="10dp"
+        android:text="系统正在加载中..."
+        android:textSize="30dp" />
+    <TextView
+        android:id="@+id/splash_textview_lint_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="top|center_horizontal"
+        android:text="Hi,Orchard_System"
+        android:textColor="#68228B"
+        android:textSize="18dp" />
+</LinearLayout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".YieldListActivity" >
+</RelativeLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.clienttest"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" >
+    </supports-screens>
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+    <application
+        android:name="com.example.clienttest.app.MonitorSystemApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.clienttest.SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.clienttest.LoginActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.example.clienttest.ResultActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.clienttest.YieldActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.clienttest.mapActivity.MapMainActivity"
+            android:configChanges="orientation|keyboardHidden" >
+        </activity>
+        <activity
+            android:name="com.example.clienttest.mapActivity.MainActivity"
+            android:configChanges="orientation|keyboardHidden" >
+        </activity>
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+        <activity
+            android:name="com.example.clienttest.YieldListActivity"
+            android:label="@string/title_activity_yield_list" >
+        </activity>
+    </application>
+</manifest>
+package com.example.clienttest;
+import org.ksoap2.SoapEnvelope;
+import org.ksoap2.serialization.SoapObject;
+import org.ksoap2.serialization.SoapSerializationEnvelope;
+import org.ksoap2.transport.HttpTransportSE;
+import com.example.clienttest.Enum.util.ConnectWebService;
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Intent;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+public class LoginActivity extends Activity implements OnClickListener{
+	EditText etProductName = null;
+	EditText etProductName1 = null;
+	String userResult;
+	private SoapObject soapObject = null;	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_login);
+		etProductName = (EditText)findViewById(R.id.etProductName);  	
+		etProductName1 = (EditText)findViewById(R.id.etProductName1);
+		etProductName.setText("guo");
+		etProductName1.setText("123");
+		Button btnSearch = (Button) findViewById(R.id.btnLogin);
+		btnSearch.setOnClickListener(this); 
+	}
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.activity_page, menu);
+		return true;
+	}
+	@Override
+	public void onClick(View arg0) {
+		System.out.println("Click succeed");
+		etProductName = (EditText)findViewById(R.id.etProductName);  	
+		etProductName1 = (EditText)findViewById(R.id.etProductName1);
+		String serviceUrl = "http://10.2.246.184:8080/monitor/us?wsdl"; 
+		String methodName = "login";  
+		SoapObject request = new SoapObject("http://service.monitor.ciee.edu", methodName);  
+		System.out.println("username="+etProductName.getText().toString());
+		System.out.println("password="+etProductName1.getText().toString());
+		request.addProperty("username", etProductName.getText().toString()); 
+		request.addProperty("password", etProductName1.getText().toString()); 
+		SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);  
+		envelope.bodyOut = request; 
+		HttpTransportSE ht = new HttpTransportSE(serviceUrl); 
+		try{
+			System.out.println("ht="+ht);
+			System.out.println("serviceUrl="+serviceUrl);
+			ht.call(null, envelope); 
+			if (envelope.getResponse()!= null){
+				System.out.println("envelope.getResponse="+envelope.getResponse());
+				SoapObject soapObject = (SoapObject) envelope.getResponse();  
+				String result = "用户名：" + soapObject.getProperty("username") + "\n";  
+				result += "用户密码：" + soapObject.getProperty("password") + "\n"; 
+				Intent intent=new Intent(this,ResultActivity.class);
+				intent.putExtra("userResult", soapObject.getProperty("username").toString());
+				startActivity(intent);
+			} 
+		}catch(Exception e){
+		}	
+	}
+}
+package com.example.clienttest;
+import java.util.List;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import com.example.clienttest.entity.Yield;
+import com.example.clienttest.mapActivity.MainActivity;
+import com.example.clienttest.mapActivity.MapMainActivity;
+public class ResultActivity extends Activity implements OnClickListener{
+	private String userRecept;
+	private Button BtnCheck;
+	private EditText EdtFarmID;
+	private EditText EdtPlotID;
+	String farmIDValue;
+	String plotIDValue;
+	List<Yield> list;
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_result);	
+		Intent intent=getIntent();
+		userRecept=intent.getExtras().get("userResult").toString();		
+		System.out.println("username result="+userRecept);	
+		BtnCheck=(Button) findViewById(R.id.btnCheck);
+		EdtFarmID=(EditText) findViewById(R.id.etFarmID);
+		EdtPlotID=(EditText) findViewById(R.id.etPlotID);
+		BtnCheck.setOnClickListener(this);			
+		farmIDValue=EdtFarmID.getText().toString();
+		plotIDValue=EdtPlotID.getText().toString();
+	}
+	@Override
+	public void onClick(View v) {		
+		Intent intent=new Intent(this, YieldListActivity.class);
+		intent.putExtra("userRecept",userRecept);
+		intent.putExtra("farmIDValue", farmIDValue);
+		intent.putExtra("plotIDValue", plotIDValue);
+		startActivity(intent);
+	}
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.activity_page, menu);
+		return true;
+	}
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			Intent intent=new Intent(this, MapMainActivity.class);
+			intent.putExtra("userRecept",userRecept);
+			intent.putExtra("farmIDValue", farmIDValue);
+			intent.putExtra("plotIDValue", plotIDValue);
+			startActivity(intent);
+			break;
+		case R.id.menu_settings:
+			break;
+		default:
+			break;
+		}
+		return true;
+	}
+}
+package com.example.clienttest;
+import java.util.Random;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.MotionEvent;
+import android.widget.TextView;
+public class SplashActivity extends Activity {
+	public final static int CLOSE_ACTIVITY=1001;
+	public final static int TOUCH_DOWN=1002;
+	TextView textViewHint;
+	String []hintString=new String[] {"Hey,Monitor System","每天都是新的一天:)","Stay hungry,stay foolish.","做自己喜欢做的事情.","不要用世俗的眼光看待自己.","保持一颗不服输的心","梦想是什么，梦想就是一种让你感到坚持就是幸福的东西。"};
+	Handler mHandler=new Handler(){
+		@Override
+		public void handleMessage(android.os.Message msg){
+			switch (msg.what) {
+			case SplashActivity.CLOSE_ACTIVITY:		
+					leadToLogin();
+				break;
+			case SplashActivity.TOUCH_DOWN:
+				leadToLogin();		
+				break;
+			default:
+				break;
+			}
+			super.handleMessage(msg);
+		}
+	};
+	public String getRamdontring(String []hint){
+		int length=hint.length;
+		Random random=new Random();
+		random.setSeed(System.currentTimeMillis());
+		int index=random.nextInt(length);
+		return hint[index];
+	}
+	@Override
+	public void onCreate(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_splash);
+		setTitle("欢迎使用谷物产量信息采集系统");
+		textViewHint=(TextView)findViewById(R.id.splash_textview_lint_text);
+		textViewHint.setText(getRamdontring(hintString));	
+		mHandler.postDelayed(new Runnable() {			
+			@Override
+			public void run() {
+				mHandler.sendEmptyMessage(SplashActivity.CLOSE_ACTIVITY);
+			}
+		}, 2000);
+	}
+	@Override
+	public boolean onTouchEvent(MotionEvent event){
+		return false;
+	}
+	private void leadToLogin(){
+		Intent intentLogin= new Intent(SplashActivity.this,
+				LoginActivity.class);
+		startActivity(intentLogin);
+		SplashActivity.this.finish();
+	}
+}
+package com.example.clienttest;
+import java.util.ArrayList;
+import java.util.List;
+import org.ksoap2.SoapEnvelope;
+import org.ksoap2.serialization.SoapObject;
+import org.ksoap2.serialization.SoapSerializationEnvelope;
+import org.ksoap2.transport.HttpTransportSE;
+import android.app.Activity;
+import android.app.ListActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.View.OnClickListener;
+import android.widget.AbsListView;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
+import com.example.clienttest.Enum.util.ConnectWebService;
+import com.example.clienttest.entity.Yield;
+public class YieldActivity extends Activity{
+	private String farmIDValue;
+	private String plotIDValue;
+	private TextView tvharvestdate;
+	private TextView tvyield_longitude;
+	private TextView tvyield_latitude;
+	private TextView tvyield_point;
+	private TextView tvyield_correcting;
+	private TextView tvyield_moisture;
+	private TextView tvyield_temperature;
+	private TextView tvyield_speed;
+	private TextView tvelevator_speed;
+	private String userRecept;
+	private Yield yield;	
+	private List<String> paramMethodList = null;
+	private List paramMethodValueList = null;
+	protected void onCreate1(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_yield);
+	}
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_yield);	
+		try{
+		Intent intent=getIntent();
+		String[] yieldlist= (String [])intent.getExtras().get("yieldlist");
+		String pos=intent.getExtras().get("position").toString();	
+		System.out.println("Pos= "+pos);	
+		tvharvestdate=(TextView) findViewById(R.id.tvharvestdate);
+		tvyield_longitude=(TextView) findViewById(R.id.tvyield_longitude);
+		tvyield_latitude=(TextView) findViewById(R.id.tvyield_latitude);
+		tvyield_point=(TextView) findViewById(R.id.tvyield_point);
+		tvyield_moisture=(TextView) findViewById(R.id.tvyield_moisture);
+		tvyield_temperature=(TextView) findViewById(R.id.tvyield_temperature);
+		tvyield_speed=(TextView) findViewById(R.id.tvyield_speed);
+		tvyield_longitude.setText(yieldlist[6]);
+		tvyield_latitude.setText(yieldlist[5]);
+		tvyield_point.setText(yieldlist[9]+"t/hm2");
+		tvyield_moisture.setText(yieldlist[7]+"%");
+		tvyield_temperature.setText(yieldlist[10]+"℃");
+		tvyield_speed.setText(yieldlist[0]+"km/h");
+		}catch(Exception e){
+			System.out.println("异常+"+e);
+		}
+	}	
+}
+package com.example.clienttest;
+import java.util.ArrayList;
+import java.util.List;
+import org.ksoap2.SoapEnvelope;
+import org.ksoap2.serialization.SoapObject;
+import org.ksoap2.serialization.SoapSerializationEnvelope;
+import org.ksoap2.transport.HttpTransportSE;
+import com.example.clienttest.entity.Yield;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.app.Activity;
+import android.app.ListActivity;
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.View.OnClickListener;
+import android.widget.AbsListView;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
+public class YieldListActivity extends ListActivity {
+	private String farmIDValue;
+	private String plotIDValue;
+	private String userRecept;	
+	private Yield yield;
+	private List<Yield> list = null;
+	private List<String[]> ylist = null;
+	private List<String> paramMethodList = null;
+	private List paramMethodValueList = null;	
+	private SoapObject soapObject = null;
+	private int listsize=0;
+	private ListView listView;
+	private MyListViewAdapter adapter;
+	private int scrollState;	
+	private View footerView;
+	private View headerView;	
+	private int item_pos;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		Intent intent=getIntent();
+		userRecept=intent.getExtras().get("userRecept").toString();	
+		plotIDValue=intent.getExtras().get("plotIDValue").toString();
+		farmIDValue=intent.getExtras().get("farmIDValue").toString();
+		System.out.println("userRecept result="+userRecept);
+		System.out.println("plotIDValue result="+plotIDValue);
+		System.out.println("farmIDValue result="+farmIDValue);
+		list = new ArrayList<Yield>();
+		ylist = new ArrayList<String[]>();
+		String serviceUrl = "http://10.2.246.184:8080/monitor/us?wsdl"; 
+		System.out.println("serviceUrl result="+serviceUrl);
+		String methodName = "yieldList";    
+		SoapObject request = new SoapObject("http://service.monitor.ciee.edu", methodName);  
+		System.out.println("farm_id="+ farmIDValue);
+		request.addProperty("username", userRecept); 
+		request.addProperty("farm_id", farmIDValue); 
+		request.addProperty("plot_id", plotIDValue);
+		SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);  
+		envelope.bodyOut = request; 
+		HttpTransportSE ht = new HttpTransportSE(serviceUrl); 
+		try{
+			System.out.println("ht="+ht);
+			System.out.println("serviceUrl="+serviceUrl);
+			ht.call(null, envelope); 
+("envelope.bodyin="+envelope.bodyIn.toString());
+			if (envelope.bodyIn.toString()!= null){
+				("envelope.getResponse="+envelope.getResponse());
+				SoapObject soapObject = (SoapObject) envelope.bodyIn; 
+				System.out.println("list num= "+soapObject.getPropertyCount());
+				listsize=soapObject.getPropertyCount();
+				for (int i = 0; i < listsize; i++) {
+					SoapObject soapChilds = (SoapObject) soapObject
+							.getProperty(i);			
+					int j=0; 
+					String[] yieldlist=new String[12];
+					yieldlist[j++]=soapChilds.getProperty("elevator_speed").toString();
+					yieldlist[j++]=soapChilds.getProperty("farm_id").toString();
+					yieldlist[j++]=soapChilds.getProperty("harvestdate").toString();
+					yieldlist[j++]=soapChilds.getProperty("plot_id").toString();
+					yieldlist[j++]=soapChilds.getProperty("yield_correcting").toString();
+					yieldlist[j++]=soapChilds.getProperty("yield_latitude").toString();
+					yieldlist[j++]=soapChilds.getProperty("yield_longitude").toString();
+					yieldlist[j++]=soapChilds.getProperty("yield_moisture").toString();
+					yieldlist[j++]=soapChilds.getProperty("yield_point").toString();
+					yieldlist[j++]=soapChilds.getProperty("yield_speed").toString();
+					yieldlist[j++]=soapChilds.getProperty("yield_temperature").toString();
+					yieldlist[j++]=soapChilds.getProperty("yield_time").toString();									
+					ylist.add(yieldlist);
+				}				
+			} 
+		}catch(Exception e){
+			System.out.println("异常+"+e);
+		}
+		try{
+		 listView = getListView();
+		 headerView=(View)findViewById(R.drawable.header);
+	     footerView = LayoutInflater.from(this).inflate(R.layout.activity_yield_list, null); 		
+	     listView.addHeaderView(headerView, null, false);
+	     listView.addFooterView(footerView);	       
+	    adapter = new MyListViewAdapter(); 
+	    setListAdapter(adapter);
+		}catch(Exception e){
+			System.out.println("异常+"+e);		
+		}		
+	    getListView().setOnScrollListener(new AbsListView.OnScrollListener(){
+		@Override
+		public void onScrollStateChanged(AbsListView view, int scrollState) {
+			YieldListActivity.this.scrollState = scrollState;
+		}				
+		@Override
+		public void onScroll(AbsListView view, int firstVisibleItem,
+			int visibleItemCount, int totalItemCount) {
+			int lastVisibleItem = firstVisibleItem + visibleItemCount - 1; 
+					if(YieldListActivity.this.scrollState != AbsListView.OnScrollListener.SCROLL_STATE_IDLE
+							&& lastVisibleItem == totalItemCount - 1) {
+						new Thread() {							
+							private Handler handler = new Handler() {
+								@Override
+								public void handleMessage(Message msg) {
+									super.handleMessage(msg);
+									adapter.notifyDataSetChanged();
+								}								
+							};
+							@Override
+							public void run() {
+								super.run();
+								try {
+									sleep(5000);
+									handler.sendEmptyMessage(0);
+								} catch (InterruptedException e) {
+									e.printStackTrace();
+								}
+							}
+						}.start();						
+					}
+				}
+			});
+	}
+	private class MyListViewAdapter extends BaseAdapter implements OnClickListener {	
+		float font=0;
+		int hight=0;
+    	int count = listsize; 
+		@Override
+		public int getCount() {
+			return count;
+		}
+		@Override
+		public Object getItem(int position) {
+			return position;
+		}
+		@Override
+		public long getItemId(int position) {
+			return position;
+		}
+		@Override
+	    public void onClick(View arg0){
+	    	Intent intent=new Intent(getApplicationContext(),YieldActivity.class);
+	    	TextView pos = (TextView)arg0; 
+	    	intent.putExtra("yieldlist",ylist.get(Integer.parseInt(pos.getTag().toString())));
+	    	System.out.println(pos.getTag().toString()); 
+	    	intent.putExtra("position",pos.getText());
+	    	startActivity(intent);
+	    }
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			TextView result = (TextView) convertView;
+			if(result == null) {
+				result = new TextView(YieldListActivity.this);
+				result.setTextAppearance(YieldListActivity.this, android.R.style.TextAppearance_Large);
+				AbsListView.LayoutParams layoutParams = new AbsListView.LayoutParams(AbsListView.LayoutParams.MATCH_PARENT,
+						AbsListView.LayoutParams.WRAP_CONTENT);
+				result.setLayoutParams(layoutParams);
+				result.setGravity(Gravity.CENTER);
+			}
+			if(position==0){
+				result.setBackground((Drawable)getResources().getDrawable(R.drawable.header));
+			}			
+			if(position>=1){
+			if( (position%2)==0 ){
+				result.setBackgroundColor(getResources().getColor(R.color.light_yellow));
+			}else{
+				result.setBackgroundColor(getResources().getColor(R.color.white));
+			}
+			result.setTag(position+1);
+			result.setText(" "+position+". "+ylist.get(position)[6]+" "+ylist.get(position)[5]);
+			result.setOnClickListener(this);
+			}
+			return result;
+		}
+    }
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.activity_yield_list, menu);
+		return true;
+	}
+}
+package com.example.clienttest.config;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import com.example.clienttest.activity.SettingActivity;
+import com.example.clienttest.app.MonitorSystemApplication;
+public class SettingConfig {
+	private Context context;
+	private static SettingConfig instace;
+	private SettingConfig() {
+		this.context = MonitorSystemApplication.getInstance();
+	}
+	public static SettingConfig getInstance() {
+		if (instace == null) {
+			synchronized (instace) {
+				if(instace==null)
+					instace = new SettingConfig();
+			}
+		}
+		return instace;
+	}
+	public static boolean isExitConfirm(Context context){
+		SharedPreferences preferences = context.getSharedPreferences(
+				SettingActivity.PRFS_NAME, context.MODE_WORLD_READABLE);
+		Boolean flag = true;
+		return flag;
+	}
+	public static String getVersionName(Context context){
+		String result="版本信息暂时不可用，请稍后再试";
+		PackageManager pm = context.getPackageManager();
+		PackageInfo pi;
+		try {
+			pi = pm.getPackageInfo(context.getPackageName(), 0);
+			result=pi.versionName;
+		} catch (NameNotFoundException e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+}
+package com.example.clienttest.config;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import com.baidu.platform.comapi.basestruct.GeoPoint;
+import com.example.clienttest.Enum.util.MainMenuItemId.MainMenuStatus;
+import com.example.clienttest.entity.Yield;
+public class YieldCollectionConfig {
+	public long machineId=-1;
+	public int orchardId=-1;
+	public  MainMenuStatus mainMenuStatus=MainMenuStatus.DEFAULT;
+	public ArrayList<GeoPoint> boundary = new ArrayList<GeoPoint>();
+	public LinkedList<Yield> yields = new LinkedList<Yield>();
+	public boolean  isBoundaryDownLoadSuccessed=false;
+	public boolean  isBoundaryUpLoadSuccessed=false;
+	public boolean  isTreesDownLoadSuccessed=false;
+	public boolean  isTreesUpLoadSuccessed=false;
+	public String accessTokenString="";
+	public String messageInformation="this is the default message.";
+}
+package com.example.clienttest;
+public final class R {
+    public static final class attr {
+    }
+    public static final class color {
+        public static final int light_yellow=0x7f060000;
+        public static final int white=0x7f060001;
+    }
+    public static final class drawable {
+        public static final int background=0x7f020000;
+        public static final int background2=0x7f020001;
+        public static final int field=0x7f020002;
+        public static final int fieldbacgroud=0x7f020003;
+        public static final int header=0x7f020004;
+        public static final int ic_launcher=0x7f020005;
+        public static final int tractor=0x7f020006;
+        public static final int tree_marker_new=0x7f020007;
+        public static final int tree_marker_no=0x7f020008;
+        public static final int tree_marker_yes=0x7f020009;
+        public static final int yield_point=0x7f02000a;
+        public static final int yield_point1=0x7f02000b;
+    }
+    public static final class id {
+        public static final int bmapViewMain=0x7f080003;
+        public static final int btnCheck=0x7f08000c;
+        public static final int btnLogin=0x7f080002;
+        public static final int btnReTry=0x7f08000b;
+        public static final int etFarmID=0x7f080007;
+        public static final int etPlotID=0x7f080009;
+        public static final int etProductName=0x7f080000;
+        public static final int etProductName1=0x7f080001;
+        public static final int layout1=0x7f08000e;
+        public static final int layout2=0x7f080011;
+        public static final int layout3=0x7f080014;
+        public static final int layout4=0x7f080017;
+        public static final int layout6=0x7f08001a;
+        public static final int layout7=0x7f08001d;
+        public static final int layout8=0x7f080020;
+        public static final int layoutdown=0x7f08000a;
+        public static final int layoutup=0x7f080005;
+        public static final int main_popup_view=0x7f080004;
+        public static final int menu_settings=0x7f080024;
+        public static final int menu_starttime_setting=0x7f080023;
+        public static final int menu_trail=0x7f080025;
+        public static final int splash_textview_lint_text=0x7f08000d;
+        public static final int tvFarmID=0x7f080006;
+        public static final int tvPlotID=0x7f080008;
+        public static final int tvharvestdate=0x7f080010;
+        public static final int tvharvestdate_lable=0x7f08000f;
+        public static final int tvyield_latitude=0x7f080016;
+        public static final int tvyield_latitude_lable=0x7f080015;
+        public static final int tvyield_longitude=0x7f080013;
+        public static final int tvyield_longitude_lable=0x7f080012;
+        public static final int tvyield_moisture=0x7f08001c;
+        public static final int tvyield_moisture_lable=0x7f08001b;
+        public static final int tvyield_point=0x7f080019;
+        public static final int tvyield_point_lable=0x7f080018;
+        public static final int tvyield_speed=0x7f080022;
+        public static final int tvyield_speed_lable=0x7f080021;
+        public static final int tvyield_temperature=0x7f08001f;
+        public static final int tvyield_temperature_lable=0x7f08001e;
+    }
+    public static final class layout {
+        public static final int activity_login=0x7f030000;
+        public static final int activity_main=0x7f030001;
+        public static final int activity_result=0x7f030002;
+        public static final int activity_splash=0x7f030003;
+        public static final int activity_yield=0x7f030004;
+        public static final int activity_yield_list=0x7f030005;
+    }
+    public static final class menu {
+        public static final int activity_map_menu=0x7f070000;
+        public static final int activity_page=0x7f070001;
+        public static final int activity_yield_list=0x7f070002;
+    }
+    public static final class string {
+        public static final int app_name=0x7f040000;
+        public static final int hello_world=0x7f040002;
+        public static final int menu_settings=0x7f040001;
+        public static final int menu_starttime_setting=0x7f040004;
+        public static final int menu_trail=0x7f040003;
+        public static final int title_activity_yield_list=0x7f040005;
+    }
+    public static final class style {
+        public static final int AppBaseTheme=0x7f050000;
+        public static final int AppTheme=0x7f050001;
+    }
+}
+package com.example.clienttest.db;
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+public class LogDbHelper extends SQLiteOpenHelper {
+	private static final String DATABASE_NAME = "orchard_system.db";
+	private static final int DATABASE_VERSION = 1;
+	public LogDbHelper(Context context) {
+		super(context, DATABASE_NAME, null, DATABASE_VERSION);
+	}
+	@Override
+	public void onCreate(SQLiteDatabase db) {
+		db.execSQL("CREATE TABLE operationlog"
+				+ " (_id  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,"+
+				"action  TEXT NOT NULL, "+
+				"actiondetails  TEXT NOT NULL,"+
+				"operationtime  TEXT NOT NULL)");
+	}
+	@Override
+	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+		String sql = " DROP TABLE IF EXISTS operationlog";
+		db.execSQL(sql);
+		onCreate(db);
+	}
+}
+package com.example.clienttest.db;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.logging.LogManager;
+import android.R.bool;
+import android.R.integer;
+import android.R.string;
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+public class LogDbManager {
+	public static class OperationLog{
+		public int _id;
+		public String action;
+		public String actionDetails;
+		public String operationTime;
+		public OperationLog(String action,String actionDetails,String operationTime){
+			this.action=action;
+			this.actionDetails=actionDetails;
+			this.operationTime=operationTime;
+		}	
+		public OperationLog(){		
+		}
+	}
+	private LogDbHelper helper;
+	private SQLiteDatabase database;
+	public LogDbManager(Context context){
+		helper=new LogDbHelper(context);
+		database=helper.getWritableDatabase();
+	}
+	public long insert(OperationLog log){
+		ContentValues contentValues=new ContentValues();
+		contentValues.put("action", log.action);
+		contentValues.put("actiondetails", log.actionDetails);
+		contentValues.put("operationTime", log.operationTime);
+		return database.insert("operationlog", null, contentValues);
+	}
+	public int delete(OperationLog log){
+		return database.delete("operationlog", "_id=?", new String[]{String.valueOf(log._id)});
+	}
+	public int deleteAll(){
+		return database.delete("operationlog", null, null);
+	}
+	public List<OperationLog> query(){
+		ArrayList<OperationLog> logs=new ArrayList<LogDbManager.OperationLog>();
+		Cursor cursor=queryCursor();
+		while (cursor.moveToNext()) {
+			OperationLog log=new OperationLog();
+			log._id=cursor.getInt(cursor.getColumnIndex("_id"));
+			log.action=cursor.getString(cursor.getColumnIndex("action"));
+			log.actionDetails=cursor.getString(cursor.getColumnIndex("actiondetails"));
+			log.operationTime=cursor.getString(cursor.getColumnIndex("operationtime"));
+			logs.add(log);
+		}
+		cursor.close();
+		return logs;
+	}
+	public Cursor queryCursor(){
+		Cursor cursor=database.query("operationlog", null, null, null, null, null, " _id desc");
+		return cursor;
+	}
+	public void closeDB(){
+		database.close();
+	}
+	public static boolean addOperationLog(Context context,String action,String actionDetails){
+		LogDbManager manager=new LogDbManager(context);
+		OperationLog log=new OperationLog(action,actionDetails,new Date().toString());
+		long result =manager.insert(log);
+		manager.closeDB();
+		if(result==-1)
+			return false;
+		else {
+			return true;
+		}
+	}
+}
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+     <item
+        android:id="@+id/menu_starttime_setting"
+        android:orderInCategory="99"
+        android:title="@string/menu_starttime_setting">
+    </item>
+</menu>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/menu_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/menu_settings"/>    
+     <item
+        android:id="@+id/menu_trail"
+        android:orderInCategory="99"
+        android:title="@string/menu_trail">
+    </item>
+</menu>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/menu_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/menu_settings"/>
+</menu>
+<resources>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+    </style>
+    <color name="light_yellow">#FFF8DC</color>
+    <color name="white">#FFFAF0</color>
+</resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">谷物信息查询系统</string>
+    <string name="menu_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_trail">轨迹回放</string>
+    <string name="menu_starttime_setting">设置初始时间</string>
+    <string name="title_activity_yield_list">YieldListActivity</string>
+</resources>
